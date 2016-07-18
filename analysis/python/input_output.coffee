@@ -7,11 +7,11 @@ python = new pythonShell path.join(__dirname, "input_output.py"), pythonPath: pr
 
 sendInput = (data, parameters) ->
   input = data: data, parameters: parameters
-  inputStr = JSON.stringify(input)
+  inputStr = JSON.stringify input
 
   python.send inputStr
 
-input = (data, parameters, cb) ->
+exports.processInput = (data, parameters, cb) ->
   sendInput data, parameters
 
   python.on 'message', (outputString) ->
@@ -19,5 +19,3 @@ input = (data, parameters, cb) ->
     cb null, output.data
 
   python.end (err) -> cb err if err
-
-exports.processInput = input

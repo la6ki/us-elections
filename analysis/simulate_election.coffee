@@ -92,9 +92,7 @@ calculateExpectedDelegates = (distributions) ->
 
   expectedDelegates
 
-simulate = (distributions, numSimulations) ->
+exports.simulate = (distributions, numSimulations) ->
   expectedDelegates: calculateExpectedDelegates distributions
   simulationResults: simulateElection distributions, numSimulations
   numSimulations: numSimulations
-
-exports.simulate = simulate

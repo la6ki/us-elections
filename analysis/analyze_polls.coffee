@@ -82,7 +82,5 @@ processScrapedPolls = (parameters) ->
             sendMail "notification", "Analysis finished successfully! New polls:\n\n\n\n#{data.newPolls}"
     )
 
-analyze = (parameters) ->
+exports.analyze = (parameters) ->
   scrapeLatestPolls processScrapedPolls parameters
-
-exports.analyze = analyze

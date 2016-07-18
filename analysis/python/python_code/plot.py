@@ -103,7 +103,6 @@ class Plot(object):
     def generate_plots(self, results, target_time_parameters):
         target_time = np.arange(target_time_parameters["start"], target_time_parameters["stop"],
                                 target_time_parameters["step"])
-
         for state in results:
             state_path = self._get_plot_state_path(state)
             self._create_folder(state_path)

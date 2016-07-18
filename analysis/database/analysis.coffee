@@ -9,7 +9,7 @@ dotenv.config path: path.join(__dirname, "../../.env")
 db = mongojs process.env.DB_URL, constants.dbCollections
 insertDB = helpers.insertDB
 
-getPolls = (cb) ->
+exports.getPolls = (cb) ->
   steps(
     ->
       db.state_polls.find({}).sort({_id: -1}).limit 1, @parallel()
@@ -22,21 +22,16 @@ getPolls = (cb) ->
 
       delete statePolls._id
       delete nationalPolls._id
-      
+
       cb null, state: statePolls, national: nationalPolls
   )
 
-sendPolls = (polls, cb) ->
+exports.sendPolls = (polls, cb) ->
   insertDB db, polls.state, 'state_polls', cb
   insertDB db, polls.national, 'national_polls', cb
 
-sendDistributions = (distributions, cb) ->
+exports.sendDistributions = (distributions, cb) ->
   insertDB db, distributions, 'state_distributions', cb
 
-sendResults = (results, cb) ->
+exports.sendResults = (results, cb) ->
   insertDB db, results, 'results', cb
-
-exports.getPolls = getPolls
-exports.sendPolls = sendPolls
-exports.sendDistributions = sendDistributions
-exports.sendResults = sendResults

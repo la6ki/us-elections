@@ -34,7 +34,7 @@ getCandidatePolls = (urls, cb) ->
         polls[numberCandidatesStr] = getPolls window.$, DATA_SELECTOR
         cb null, removeDuplicates(n: polls).n if ++numScrapedURLs == Object.keys(urls).length
 
-getStatePolls = (statePollURLs, cb) ->
+exports.state = (statePollURLs, cb) ->
   statePolls = {}
   numScrapedURLs = 0
 
@@ -50,5 +50,4 @@ getStatePolls = (statePollURLs, cb) ->
           statePolls[state][numberCandidatesStr] = polls for numberCandidatesStr, polls of additionalPolls
           cb null, removeDuplicates(statePolls) if ++numScrapedURLs == Object.keys(statePollURLs).length
 
-exports.state = getStatePolls
 exports.national = getCandidatePolls

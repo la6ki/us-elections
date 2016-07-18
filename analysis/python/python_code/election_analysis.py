@@ -20,7 +20,7 @@ class ElectionAnalysis(object):
         state_data = {}
 
         fraction_voters_unsorted = {}
-        number_voters_unsorted = {}
+        sample_size_unsorted = {}
         dates_unsorted = {}
         candidates = []
 
@@ -34,13 +34,13 @@ class ElectionAnalysis(object):
 
                 if not candidate in fraction_voters_unsorted:
                     fraction_voters_unsorted[candidate] = []
-                if not candidate in number_voters_unsorted:
-                    number_voters_unsorted[candidate] = []
+                if not candidate in sample_size_unsorted:
+                    sample_size_unsorted[candidate] = []
                 if not candidate in dates_unsorted:
                     dates_unsorted[candidate] = []
 
                 fraction_voters_unsorted[candidate].append(percentages[candidate])
-                number_voters_unsorted[candidate].append(sample)
+                sample_size_unsorted[candidate].append(sample)
                 dates_unsorted[candidate].append(date)
 
         for candidate in candidates:
@@ -48,11 +48,11 @@ class ElectionAnalysis(object):
             sorting_indices = np.argsort(dates_unsorted[candidate])
 
             fraction_voters = np.array(fraction_voters_unsorted[candidate])[sorting_indices] / 100.
-            number_voters = np.array(number_voters_unsorted[candidate])[sorting_indices]
+            sample_size = np.array(sample_size_unsorted[candidate])[sorting_indices]
             dates = dates_unsorted[candidate][sorting_indices]
-            candidate_voters = np.around(np.multiply(number_voters, fraction_voters))
+            candidate_voters = np.around(np.multiply(sample_size, fraction_voters))
 
-            state_data[candidate] = {"number_voters": candidate_voters, "sample_size": number_voters,
+            state_data[candidate] = {"number_voters": candidate_voters, "sample_size": sample_size,
                                      "training_time": dates, "fraction_voters": fraction_voters}
 
         return state_data

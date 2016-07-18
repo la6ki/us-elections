@@ -133,22 +133,6 @@ getLatestPolls = (polls, cb) ->
     groupedStatePolls = groupStatePolls statePolls
     cb null, national: removeDuplicates(n: groupedNationalPolls).n, state: removeDuplicates(groupedStatePolls)
 
-scrapeLatestPolls = (cb) ->
-  jsdom.env POLLS_URL, [ 'http://code.jquery.com/jquery.js' ], (err, window) ->
-    return cb err if err
-    $ = window.$
-    electionPolls = national: [], state: []
-
-    allDailyPolls = getDailyPolls()
-    for dailyPolls in allDailyPolls
-      nextElectionPolls = getElectionPolls dailyPolls
-      electionPolls.national.push poll for poll in nextElectionPolls.national
-      electionPolls.state.push poll for poll in nextElectionPolls.state
-      
-    getLatestPolls electionPolls, (err, latestPolls) ->
-      return cb err if err
-      cb null, latestPolls
-
 filterPollPool = (latestPolls, oldPolls) ->
   newPolls = {}
 
@@ -165,7 +149,23 @@ filterPollPool = (latestPolls, oldPolls) ->
 
   newPolls
 
-filterNewPolls = (latestPolls, oldPolls) ->
+exports.scrape = (cb) ->
+  jsdom.env POLLS_URL, [ 'http://code.jquery.com/jquery.js' ], (err, window) ->
+    return cb err if err
+    $ = window.$
+    electionPolls = national: [], state: []
+
+    allDailyPolls = getDailyPolls()
+    for dailyPolls in allDailyPolls
+      nextElectionPolls = getElectionPolls dailyPolls
+      electionPolls.national.push poll for poll in nextElectionPolls.national
+      electionPolls.state.push poll for poll in nextElectionPolls.state
+
+    getLatestPolls electionPolls, (err, latestPolls) ->
+      return cb err if err
+      cb null, latestPolls
+
+exports.filterNewPolls = (latestPolls, oldPolls) ->
   newNationalPolls = filterPollPool latestPolls.national, oldPolls.national
 
   newStatePolls = {}
@@ -174,6 +174,3 @@ filterNewPolls = (latestPolls, oldPolls) ->
     newStatePolls[state] = newPolls if Object.keys(newPolls).length > 0
 
   national: newNationalPolls, state: newStatePolls
-
-exports.scrape = scrapeLatestPolls
-exports.filterNewPolls = filterNewPolls
