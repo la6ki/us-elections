@@ -64,13 +64,13 @@ processScrapedPolls = (parameters) ->
 
         allPolls = combinePolls newPolls, oldPolls
         sendPollsDB allPolls, (err) -> sendMail "error", "DB error: #{err}\n in send polls" if err
-        pythonFormatPolls allPolls
+        allPolls: pythonFormatPolls(allPolls), newPolls: mailFormatPolls(newPolls)
 
-      (err, polls) ->
+      (err, data) ->
         return sendMail "error", "Plot processing: #{err}" if err
-        return if Object.keys(polls).length == 0
+        return if Object.keys(data.allPolls).length == 0
 
-        analyzePolls polls, parameters.pythonParameters, (err, distributions) ->
+        analyzePolls data.allPolls, parameters.pythonParameters, (err, distributions) ->
           return sendMail "error", "Python error: #{err}" if err
 
           distributions = normalizeDistributions distributions
@@ -79,9 +79,7 @@ processScrapedPolls = (parameters) ->
           sendDistributionsDB distributions, (err) -> sendMail "error", "DB error: #{err}\n in send distributions" if err
           sendSimulationResultsDB simulationResults, (err) ->
             return sendMail "error", "DB error: #{err} in send results" if err
-
-            pollsMailFormat = mailFormatPolls newPolls
-            sendMail "notification", "Analysis finished successfully! New polls:\n\n#{pollsMailFormat}"
+            sendMail "notification", "Analysis finished successfully! New polls:\n\n\n\n#{data.newPolls}"
     )
 
 analyze = (parameters) ->

@@ -49,7 +49,6 @@ calculateWinProbabilities = (simulationResults) ->
   pluralityWins = simulationResults.pluralityWins
   numSimulations = simulationResults.numSimulations
 
-  numSimulations = 100000 #temp
   pluralityProbabilities = {}
   for candidate, count of pluralityWins
     pluralityProbabilities[candidate] = count/numSimulations
