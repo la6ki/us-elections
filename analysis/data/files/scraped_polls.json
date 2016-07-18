@@ -1,0 +1,431 @@
+{
+  "national": {
+    "3-way": [
+      {
+        "pollster": "Rasmussen Reports",
+        "date": {
+          "month": 7,
+          "day": 5
+        },
+        "sample": 1000,
+        "percentages": {
+          "Clinton": 38,
+          "Trump": 40,
+          "Johnson": 9
+        }
+      },
+      {
+        "pollster": "Pew Research",
+        "date": {
+          "month": 6,
+          "day": 21
+        },
+        "sample": 1655,
+        "percentages": {
+          "Clinton": 45,
+          "Trump": 36,
+          "Johnson": 11
+        }
+      },
+      {
+        "pollster": "FOX News",
+        "date": {
+          "month": 6,
+          "day": 27
+        },
+        "sample": 1017,
+        "percentages": {
+          "Clinton": 41,
+          "Trump": 36,
+          "Johnson": 10
+        }
+      },
+      {
+        "pollster": "Economist/YouGov",
+        "date": {
+          "month": 6,
+          "day": 26
+        },
+        "sample": 1069,
+        "percentages": {
+          "Clinton": 40,
+          "Trump": 35,
+          "Johnson": 8
+        }
+      }
+    ],
+    "4-way": [
+      {
+        "pollster": "Reuters/Ipsos",
+        "date": {
+          "month": 7,
+          "day": 4
+        },
+        "sample": 1345,
+        "percentages": {
+          "Clinton": 42,
+          "Trump": 33,
+          "Johnson": 6,
+          "Stein": 4
+        }
+      },
+      {
+        "pollster": "Economist/YouGov",
+        "date": {
+          "month": 7,
+          "day": 3
+        },
+        "sample": 1004,
+        "percentages": {
+          "Clinton": 42,
+          "Trump": 37,
+          "Johnson": 4,
+          "Stein": 3
+        }
+      },
+      {
+        "pollster": "USA Today/Suffolk",
+        "date": {
+          "month": 6,
+          "day": 28
+        },
+        "sample": 1000,
+        "percentages": {
+          "Clinton": 39,
+          "Trump": 35,
+          "Johnson": 8,
+          "Stein": 3
+        }
+      },
+      {
+        "pollster": "IBD/TIPP",
+        "date": {
+          "month": 6,
+          "day": 27
+        },
+        "sample": 837,
+        "percentages": {
+          "Clinton": 37,
+          "Trump": 36,
+          "Johnson": 9,
+          "Stein": 5
+        }
+      },
+      {
+        "pollster": "PPP (D)",
+        "date": {
+          "month": 6,
+          "day": 28
+        },
+        "sample": 947,
+        "percentages": {
+          "Clinton": 45,
+          "Trump": 41,
+          "Johnson": 5,
+          "Stein": 2
+        }
+      },
+      {
+        "pollster": "Reuters/Ipsos",
+        "date": {
+          "month": 6,
+          "day": 27
+        },
+        "sample": 1247,
+        "percentages": {
+          "Clinton": 42,
+          "Trump": 31,
+          "Johnson": 5,
+          "Stein": 4
+        }
+      },
+      {
+        "pollster": "Quinnipiac",
+        "date": {
+          "month": 6,
+          "day": 24
+        },
+        "sample": 1610,
+        "percentages": {
+          "Clinton": 39,
+          "Trump": 37,
+          "Johnson": 8,
+          "Stein": 4
+        }
+      }
+    ],
+    "2-way": [
+      {
+        "pollster": "Gravis*",
+        "date": {
+          "month": 6,
+          "day": 28
+        },
+        "sample": 2162,
+        "percentages": {
+          "Clinton": 50,
+          "Trump": 48
+        }
+      },
+      {
+        "pollster": "Rasmussen Reports",
+        "date": {
+          "month": 6,
+          "day": 29
+        },
+        "sample": 1000,
+        "percentages": {
+          "Clinton": 39,
+          "Trump": 43
+        }
+      }
+    ]
+  },
+  "state": {
+    "New Hampshire": {
+      "2-way": [
+        {
+          "pollster": "ARG",
+          "date": {
+            "month": 6,
+            "day": 26
+          },
+          "sample": 533,
+          "percentages": {
+            "Clinton": 47,
+            "Trump": 42
+          }
+        },
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 578,
+          "percentages": {
+            "Clinton": 43,
+            "Trump": 39
+          }
+        }
+      ]
+    },
+    "Wisconsin": {
+      "2-way": [
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 843,
+          "percentages": {
+            "Clinton": 47,
+            "Trump": 39
+          }
+        }
+      ]
+    },
+    "California": {
+      "2-way": [
+        {
+          "pollster": "Field",
+          "date": {
+            "month": 6,
+            "day": 12
+          },
+          "sample": 956,
+          "percentages": {
+            "Clinton": 58,
+            "Trump": 28
+          }
+        }
+      ]
+    },
+    "New Jersey": {
+      "3-way": [
+        {
+          "pollster": "Fairleigh Dickinson",
+          "date": {
+            "month": 6,
+            "day": 24
+          },
+          "sample": 712,
+          "percentages": {
+            "Clinton": 44,
+            "Trump": 32,
+            "Johnson": 9
+          }
+        }
+      ]
+    },
+    "Arizona": {
+      "2-way": [
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 691,
+          "percentages": {
+            "Clinton": 40,
+            "Trump": 44
+          }
+        }
+      ]
+    },
+    "Florida": {
+      "4-way": [
+        {
+          "pollster": "Bay News 9/SurveyUSA",
+          "date": {
+            "month": 6,
+            "day": 26
+          },
+          "sample": 1678,
+          "percentages": {
+            "Clinton": 46,
+            "Trump": 42,
+            "Johnson": 2,
+            "Stein": 1
+          }
+        }
+      ],
+      "2-way": [
+        {
+          "pollster": "Gravis*",
+          "date": {
+            "month": 6,
+            "day": 28
+          },
+          "sample": 1619,
+          "percentages": {
+            "Clinton": 49,
+            "Trump": 49
+          }
+        }
+      ]
+    },
+    "Ohio": {
+      "2-way": [
+        {
+          "pollster": "Gravis*",
+          "date": {
+            "month": 6,
+            "day": 28
+          },
+          "sample": 1270,
+          "percentages": {
+            "Clinton": 49,
+            "Trump": 48
+          }
+        },
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 708,
+          "percentages": {
+            "Clinton": 44,
+            "Trump": 40
+          }
+        }
+      ]
+    },
+    "Pennsylvania": {
+      "2-way": [
+        {
+          "pollster": "Gravis*",
+          "date": {
+            "month": 6,
+            "day": 28
+          },
+          "sample": 1958,
+          "percentages": {
+            "Clinton": 50,
+            "Trump": 48
+          }
+        },
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 980,
+          "percentages": {
+            "Clinton": 46,
+            "Trump": 42
+          }
+        }
+      ]
+    },
+    "Iowa": {
+      "2-way": [
+        {
+          "pollster": "PPP (D)*",
+          "date": {
+            "month": 6,
+            "day": 23
+          },
+          "sample": 897,
+          "percentages": {
+            "Clinton": 41,
+            "Trump": 39
+          }
+        }
+      ],
+      "4-way": [
+        {
+          "pollster": "Loras College",
+          "date": {
+            "month": 6,
+            "day": 26
+          },
+          "sample": 600,
+          "percentages": {
+            "Clinton": 44,
+            "Trump": 31,
+            "Johnson": 6,
+            "Stein": 2
+          }
+        }
+      ]
+    },
+    "North Carolina": {
+      "2-way": [
+        {
+          "pollster": "Civitas (R)*",
+          "date": {
+            "month": 6,
+            "day": 22
+          },
+          "sample": 600,
+          "percentages": {
+            "Clinton": 42,
+            "Trump": 40
+          }
+        }
+      ]
+    },
+    "New York": {
+      "2-way": [
+        {
+          "pollster": "Siena",
+          "date": {
+            "month": 6,
+            "day": 25
+          },
+          "sample": 803,
+          "percentages": {
+            "Clinton": 54,
+            "Trump": 31
+          }
+        }
+      ]
+    }
+  }
+}

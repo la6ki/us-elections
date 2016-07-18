@@ -1,0 +1,26 @@
+{
+  "name": "us_election_predictions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run_analysis.coffee",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "jsdom": "^8.4.0",
+    "mocha": "^2.5.3",
+    "moment": "^2.14.1",
+    "mongojs": "^2.3.0",
+    "nodemailer": "^2.4.2",
+    "python-shell": "^0.4.0",
+    "should": "^9.0.2",
+    "step": "0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lyuben Laskin, Luca Ambrogioni",
+  "license": "ISC"
+}
